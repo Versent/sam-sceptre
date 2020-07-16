@@ -1,0 +1,19 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: S3 Bucket for SAM deployment artifacts
+
+Parameters:
+  BucketPrefix:
+    Description: Prefix for artifact bucket name
+    Type: String
+
+Resources:
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${BucketPrefix}-artifacts-${AWS::AccountId}-${AWS::Region}"
+
+Outputs:
+  ArtifactBucketName:
+    Description: "Name of the artifact bucket"
+    Value: !Ref ArtifactBucket

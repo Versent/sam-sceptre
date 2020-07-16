@@ -1,0 +1,5 @@
+---
+template_path: s3/artifact-bucket.cfn.yaml
+
+parameters:
+  BucketPrefix: {{ project_code }}

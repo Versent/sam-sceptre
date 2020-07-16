@@ -1,0 +1,6 @@
+.aws-sam
+.package_bucket.txt
+__generated_*.yaml
+
+__pycache__
+node_modules
